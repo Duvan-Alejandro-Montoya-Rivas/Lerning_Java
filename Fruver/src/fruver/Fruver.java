@@ -1,0 +1,187 @@
+package fruver;
+
+import java.util.Scanner;
+
+public class Fruver {
+    public static void main(String[] args) {
+    Verduras espinaca=new Verduras();
+    Verduras pepino=new Verduras();
+    Refrigerados rf1=new Refrigerados();
+    Refrigerados pollo=new Refrigerados();
+    Congelados cg1=new Congelados();
+    Congelados papa=new Congelados();
+    Empacados emp1=new Empacados();
+    Scanner entrada = new Scanner(System.in);
+    int op;
+    
+        System.out.println("Menu");
+        System.out.println("1-Almacenar Verdura Fresca");
+        System.out.println("2-Almacenar refrigerados");
+        System.out.println("3-Almacenar congelados");
+        System.out.println("4-Almacenar empacados");
+        System.out.print("Ingrese la opcion: ");
+        op=entrada.nextInt();
+        switch(op){
+            case 1: {
+                System.out.println("Fecha ingreso de espinaca: ");
+                espinaca.setFecha_ing(entrada.nextLine());
+                System.out.println("Numero de lote: ");
+                espinaca.setNum_lote(entrada.nextLine());
+                System.out.println("Tipo nacional o importado: ");
+                espinaca.setTipo(entrada.nextLine());
+                System.out.println("Ciudad de origen: ");
+                espinaca.setCiud_orig(entrada.nextLine());
+                System.out.println("Fecha de Vencimiento: ");
+                espinaca.setFecha_venc(entrada.nextLine());
+                System.out.println("Numero de unidades recibidads: ");
+                espinaca.setNum_unid(entrada.nextInt());
+                System.out.println("Valor de Compra: ");
+                espinaca.setValor_compra(entrada.nextInt());
+                System.out.println("Valor de venta: ");
+                espinaca.setValor_venta(entrada.nextInt());
+                System.out.println("====================================================");
+    
+                System.out.println("Fecha ingreso de pepino: ");
+                pepino.setFecha_ing(entrada.nextLine());
+                System.out.println("Numero de lote: ");
+                pepino.setNum_lote(entrada.nextLine());
+                System.out.println("Tipo nacional o importado: ");
+                pepino.setTipo(entrada.nextLine());
+                System.out.println("Ciudad de origen: ");
+                pepino.setCiud_orig(entrada.nextLine());
+                System.out.println("Fecha de Vencimiento: ");
+                pepino.setFecha_venc(entrada.nextLine());
+                System.out.println("Numero de unidades recibidads: ");
+                pepino.setNum_unid(entrada.nextInt());
+                System.out.println("Valor de Compra: ");
+                pepino.setValor_compra(entrada.nextInt());
+                System.out.println("Valor de venta: ");
+                pepino.setValor_venta(entrada.nextInt());
+                System.out.println("====================================================");
+                System.out.println("Datos de espinaca");
+                espinaca.imprimir();
+                espinaca.imprimirP();
+                System.out.println("====================================================");
+                System.out.println("Datos de pepino");
+                pepino.imprimir();
+                pepino.imprimirP();
+            }break;
+            case 2: {
+                System.out.println("Datos de Carne de vaca");
+                System.out.println("Codigo invima: ");
+                rf1.setCod_inv(entrada.nextLine());
+                System.out.println("Fecha de  Envio: ");
+                rf1.setFecha_env(entrada.nextLine());
+                System.out.println("Temeratura de mantenimiento: ");
+                rf1.setTemp_man(entrada.nextLine());
+                System.out.println("Ciudad de origen");
+                rf1.setCiud_orig(entrada.nextLine());
+                System.out.println("Numero de lote: ");
+                rf1.setNum_lote(entrada.nextLine());
+                System.out.println("Fecha de Vencimiento: ");
+                rf1.setFecha_venc(entrada.nextLine());
+                System.out.println("Numero de unidades recibidas: ");
+                rf1.setNum_unid(entrada.nextInt());
+                System.out.println("Valor de Compra: ");
+                rf1.setValor_compra(entrada.nextInt());
+                System.out.println("Valor de venta: ");
+                rf1.setValor_venta(entrada.nextInt());
+                System.out.println("====================================================");
+                System.out.println("Datos de pollo");
+                System.out.println("Codigo invima: ");
+                pollo.setCod_inv(entrada.nextLine());
+                System.out.println("Fecha de  Envio: ");
+                pollo.setFecha_env(entrada.nextLine());
+                System.out.println("Temeratura de mantenimiento: ");
+                pollo.setTemp_man(entrada.nextLine());
+                System.out.println("Ciudad de origen");
+                pollo.setCiud_orig(entrada.nextLine());
+                System.out.println("Numero de lote: ");
+                pollo.setNum_lote(entrada.nextLine());
+                System.out.println("Fecha de Vencimiento: ");
+                pollo.setFecha_venc(entrada.nextLine());
+                System.out.println("Numero de unidades recibidas: ");
+                pollo.setNum_unid(entrada.nextInt());
+                System.out.println("Valor de Compra: ");
+                pollo.setValor_compra(entrada.nextInt());
+                System.out.println("Valor de venta: ");
+                pollo.setValor_venta(entrada.nextInt());
+                System.out.println("Carne de vaca");
+                rf1.imprimir();
+                rf1.imprimirP();
+                System.out.println("Datos de pollo");
+                pollo.imprimir();
+                pollo.imprimirP();
+            }break;
+            case 3: {
+                System.out.println("Datos de Zanahoria");
+                System.out.println("Fecha  de congelamiento: ");
+                cg1.setFecha_cog(entrada.nextLine());
+                System.out.println("Temperatura de Mantenimiento: ");
+                cg1.setTemp_man(entrada.nextLine());
+                System.out.println("Niveles de Salinidad: ");
+                cg1.setLvl_sal(entrada.nextLine());
+                System.out.println("Numero de lote: ");
+                cg1.setNum_lote(entrada.nextLine());
+                System.out.println("Fecha de Vencimiento: ");
+                cg1.setFecha_venc(entrada.nextLine());
+                System.out.println("Numero de unidades recibidas: ");
+                cg1.setNum_unid(entrada.nextInt());
+                System.out.println("Valor de Compra: ");
+                cg1.setValor_compra(entrada.nextInt());
+                System.out.println("Valor de venta: ");
+                cg1.setValor_venta(entrada.nextInt());
+                System.out.println("====================================================");
+                System.out.println("Datos papa");
+                System.out.println("Fecha  de congelamiento: ");
+                papa.setFecha_cog(entrada.nextLine());
+                System.out.println("Temperatura de Mantenimiento: ");
+                papa.setTemp_man(entrada.nextLine());
+                System.out.println("Niveles de Salinidad: ");
+                papa.setLvl_sal(entrada.nextLine());
+                System.out.println("Numero de lote: ");
+                papa.setNum_lote(entrada.nextLine());
+                System.out.println("Fecha de Vencimiento: ");
+                papa.setFecha_venc(entrada.nextLine());
+                System.out.println("Numero de unidades recibidas: ");
+                papa.setNum_unid(entrada.nextInt());
+                System.out.println("Valor de Compra: ");
+                papa.setValor_compra(entrada.nextInt());
+                System.out.println("Valor de venta: ");
+                papa.setValor_venta(entrada.nextInt());
+                System.out.println("Datos de zanahoria");
+                cg1.imprimir();
+                cg1.imprimirP();
+                System.out.println("Datos de papa");
+                papa.imprimir();
+                papa.imprimirP();
+            }break;
+            case 4: {
+                System.out.println("Codigo de invima: ");
+                emp1.setCod_inv(entrada.nextLine());
+                System.out.println("Fecha de Empaque: ");
+                emp1.setFecha_emp(entrada.nextLine());
+                System.out.println("Pais de origen: ");
+                emp1.setPais_orig(entrada.nextLine());
+                System.out.println("Numero de lote: ");
+                emp1.setNum_lote(entrada.nextLine());
+                System.out.println("Fecha de Vencimiento: ");
+                emp1.setFecha_venc(entrada.nextLine());
+                System.out.println("Numero de unidades recibidas: ");
+                emp1.setNum_unid(entrada.nextInt());
+                System.out.println("Valor de Compra: ");
+                emp1.setValor_compra(entrada.nextInt());
+                System.out.println("Valor de venta: ");
+                emp1.setValor_venta(entrada.nextInt());
+                System.out.println("====================================================");
+                emp1.imprimir();
+                emp1.imprimirP();
+            }break;
+            default:{
+                System.out.println("Opcion incorrecta :( ");
+            }break;
+                
+        }
+    }
+    
+}
