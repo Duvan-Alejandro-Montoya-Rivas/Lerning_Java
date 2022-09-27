@@ -1,48 +1,25 @@
 package centro_medico;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Pacientes extends Persona {
-    private int edad;
+   private ArrayList<String>sintoma;
+   private ArrayList<Persona>grupo;
 
-    public Pacientes(int edad, String nombre, String apellido, int id, String celular) {
-        super(nombre, apellido, id, celular);
-        this.edad = edad;
-    }
-
-    public Pacientes() {
+    public Pacientes(String nombre, String apellido, int edad, int id, String celular) {
+        super(nombre, apellido, edad, id, celular);
+        this.sintoma= new ArrayList<>();
+        this.grupo=new ArrayList<>();
         
     }
-
-    private int getEdad() {
-        return edad;
-    }
-
-    private void setEdad(int edad) {
-        this.edad = edad;
-    }
-    public void EntradaDP(){
-        Scanner entrada= new Scanner(System.in);
-        Scanner ent1 = new Scanner(System.in);
-        System.out.println("Agregar Nombre: ");
-        super.setNombre(entrada.nextLine());
-        System.out.println("Agregar Apellido: ");
-        super.setApellido(entrada.nextLine());
-        System.out.println("Agregar Edad: ");
-        this.edad= entrada.nextInt();
-        System.out.println("Agregar Cedula: ");
-        super.setId(entrada.nextInt());
-        System.out.println("Agregar Celular:");
-        super.setCelular(ent1.nextLine());       
-    }
-    @Override
-    public void imprimir() {
-        System.out.println("Datos de paciente"
-                + "\n Nombre: "+super.getNombre()
-                + "\n Apellido: "+super.getApellido()
-                + "\n Edad: "+this.edad
-                + "\n Cedula: "+super.getId()
-                + "\n Celular: "+super.getCelular());
+    
+    public void add(Persona p){
+        grupo.add(p);
     }
     
+    public void addSintoma(String s){
+        sintoma.add(s);
+    }
+   
 }

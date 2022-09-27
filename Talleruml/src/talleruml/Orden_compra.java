@@ -30,6 +30,7 @@ public class Orden_compra{
     public Orden_compra() {
         cuenta = new Cuenta();
     }
+    
 
     public int getSerial() {
         return serial;

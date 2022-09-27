@@ -12,7 +12,7 @@ import java.awt.event.WindowListener;
  *
  * @author Juan Montoya}
  */
-public class Miventana implements WindowListener{
+public class Miventana implements WindowListener{ //para poder usar solo el o los metodos que necesito, puedo usar ((extends WindowAdapter)) y ya, solo sobre escribo el metodo que necesito en concreto 
 
     @Override
     public void windowOpened(WindowEvent e) {

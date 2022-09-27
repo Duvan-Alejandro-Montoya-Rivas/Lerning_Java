@@ -2,17 +2,16 @@ package centro_medico;
 public abstract class Persona {
     private String nombre;
     private String apellido;
+    private int edad;
     private int id;
     private String celular;
 
-    public Persona(String nombre, String apellido, int id, String celular) {
+    public Persona(String nombre, String apellido, int edad, int id, String celular) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.edad = edad;
         this.id = id;
         this.celular = celular;
-    }
-
-    public Persona() {
     }
 
     public String getNombre() {
@@ -46,5 +45,20 @@ public abstract class Persona {
     public void setCelular(String celular) {
         this.celular = celular;
     }
-    public abstract void imprimir();
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", id=" + id + ", celular=" + celular + '}';
+    }
+    
+    
+    
 }
